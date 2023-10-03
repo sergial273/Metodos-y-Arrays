@@ -7,14 +7,7 @@ public class Tarea11 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
-		int num = Integer.parseInt(dia);
-		
-		while (num <= 0) {
-			JOptionPane.showMessageDialog(null,"Valor no vàlido");
-			dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
-			num = Integer.parseInt(dia);
-		}
+		int num = metodoPedirDimensionParaEstructurarMejor();
 		
 		int arr1[] = rellenar(num);
 		
@@ -57,6 +50,18 @@ public class Tarea11 {
 			res[i] = arr1[i] * arr2[i];
 		}
 		return res;
+	}
+	
+	public static int metodoPedirDimensionParaEstructurarMejor() {
+		String dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
+		int num = Integer.parseInt(dia);
+		
+		while (num <= 0) {
+			JOptionPane.showMessageDialog(null,"Valor no vàlido");
+			dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
+			num = Integer.parseInt(dia);
+		}
+		return num;
 	}
 
 }

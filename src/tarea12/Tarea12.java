@@ -6,14 +6,7 @@ public class Tarea12 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
-		int num = Integer.parseInt(dia);
-		
-		while (num <= 0) {
-			JOptionPane.showMessageDialog(null,"Valor no vàlido");
-			dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
-			num = Integer.parseInt(dia);
-		}
+		int num = pedirElem();
 		
 		int arr[] = rellenar(num);
 		
@@ -68,6 +61,18 @@ public class Tarea12 {
 		}
 		System.out.println();
 		
+	}
+	
+	public static int pedirElem() {
+		String dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
+		int num = Integer.parseInt(dia);
+		
+		while (num <= 0) {
+			JOptionPane.showMessageDialog(null,"Valor no vàlido");
+			dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
+			num = Integer.parseInt(dia);
+		}
+		return num;
 	}
 
 }

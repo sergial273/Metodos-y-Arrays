@@ -7,8 +7,7 @@ public class Tarea3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String dia = JOptionPane.showInputDialog("Que número quieres comprobar:");
-		int num = Integer.parseInt(dia);
+		int num = pedirNum();
 		
 		if(comprobarPrimo(num)) {
 			JOptionPane.showMessageDialog(null,"El número es primo");
@@ -36,5 +35,11 @@ public class Tarea3 {
 
 			return primo;
 		}
+	}
+
+	public static int pedirNum() {
+		String dia = JOptionPane.showInputDialog("Que número quieres comprobar:");
+		int num = Integer.parseInt(dia);
+		return num;
 	}
 }

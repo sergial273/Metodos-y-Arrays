@@ -6,7 +6,16 @@ public class Tarea5 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int num = pedirNum();
+		
+		JOptionPane.showMessageDialog(null,"El binario de " + num + " es "+ calcBinario(num) );
+	}
 
+	public static String calcBinario(int num) {
+		return Integer.toBinaryString(num);
+	}
+	
+	public static int pedirNum() {
 		String dia = JOptionPane.showInputDialog("De que número quieres convertir a binario:");
 		int num = Integer.parseInt(dia);
 		
@@ -15,12 +24,6 @@ public class Tarea5 {
 			dia = JOptionPane.showInputDialog("De que número quieres convertir a binario:");
 			num = Integer.parseInt(dia);
 		}
-		
-		
-		JOptionPane.showMessageDialog(null,"El binario de " + num + " es "+ calcBinario(num) );
-	}
-
-	public static String calcBinario(int num) {
-		return Integer.toBinaryString(num);
+		return num;
 	}
 }

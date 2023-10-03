@@ -7,14 +7,7 @@ public class Tarea7 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		String dia = JOptionPane.showInputDialog("Que cantidad de euros quieres convertir:");
-		Double num = Double.parseDouble(dia);
-		
-		while (num < 0) {
-			JOptionPane.showMessageDialog(null,"Valor no vàlido");
-			dia = JOptionPane.showInputDialog("Que cantidad de euros quieres convertir:");
-			num = Double.parseDouble(dia);
-		}
+		double num = pedirNum();
 		
 		
 		conversion(num);
@@ -25,5 +18,17 @@ public class Tarea7 {
 				"Son "+ num*1.28611 + " dolares \n"+
 				"Son "+ num*129.852 + " yenes \n"
 				);
+	}
+	
+	public static double pedirNum() {
+		String dia = JOptionPane.showInputDialog("Que cantidad de euros quieres convertir:");
+		Double num = Double.parseDouble(dia);
+		
+		while (num < 0) {
+			JOptionPane.showMessageDialog(null,"Valor no vàlido");
+			dia = JOptionPane.showInputDialog("Que cantidad de euros quieres convertir:");
+			num = Double.parseDouble(dia);
+		}
+		return num;
 	}
 }
