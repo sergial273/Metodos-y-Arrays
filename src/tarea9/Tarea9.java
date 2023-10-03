@@ -13,7 +13,7 @@ public class Tarea9 {
 	}
 
 	public static int[] rellenar(int min, int max) {
-		String dia = JOptionPane.showInputDialog("De que tamaño quierse el array:");
+		String dia = JOptionPane.showInputDialog("De que tamaño quieres el array:");
 		int num = Integer.parseInt(dia);
 		
 		while (num <= 0) {
